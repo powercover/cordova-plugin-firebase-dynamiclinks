@@ -1,9 +1,8 @@
 #import "AppDelegate+FirebaseDynamicLinksPlugin.h"
 #import "FirebaseDynamicLinksPlugin.h"
 #import <objc/runtime.h>
+@import FirebaseDynamicLinks;
 
-@import Firebase;
-@import GoogleSignIn;
 
 @implementation AppDelegate (FirebaseDynamicLinksPlugin)
 

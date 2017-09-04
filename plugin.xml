@@ -94,6 +94,10 @@
         <config-file target="*-Info.plist" parent="NSContactsUsageDescription">
            <string>$CONTACTS_USAGE_DESCRIPTION</string>
         </config-file>
+        
+        <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
+           <string>$PHOTO_LIBRARY_USAGE_DESCRIPTION</string>
+        </config-file>
 
         <header-file src="src/ios/AppDelegate+FirebaseDynamicLinksPlugin.h" />
         <source-file src="src/ios/AppDelegate+FirebaseDynamicLinksPlugin.m" />

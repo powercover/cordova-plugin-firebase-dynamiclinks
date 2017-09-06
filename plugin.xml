@@ -22,7 +22,7 @@
 
     <preference name="REVERSED_CLIENT_ID" />
     <preference name="APP_DOMAIN" />
-    <preference name="APP_PATH" />
+    <preference name="APP_PATH" default ="/" />
 
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
@@ -54,7 +54,7 @@
 
     <platform name="ios">
         <preference name="CONTACTS_USAGE_DESCRIPTION" default=" " />
-        <preference name="PHOTO_LIBRARY_USAGE_DESCRIPTION" default=" " />
+        <preference name="PHOTO_LIBRARY_USAGE_DESCRIPTION" />
 
         <config-file parent="/*" target="config.xml">
             <feature name="FirebaseDynamicLinks">
@@ -97,7 +97,7 @@
         <config-file target="*-Info.plist" parent="NSContactsUsageDescription">
            <string>$CONTACTS_USAGE_DESCRIPTION</string>
         </config-file>
-        
+
         <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
            <string>$PHOTO_LIBRARY_USAGE_DESCRIPTION</string>
         </config-file>

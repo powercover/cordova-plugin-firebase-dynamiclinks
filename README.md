@@ -3,11 +3,13 @@
  
 ## Installation
 
-    cordova plugin add cordova-plugin-firebase-dynamiclinks --save --variable APP_DOMAIN="example.com" --variable APP_PATH="/" --variable REVERSED_CLIENT_ID="123456789.com.example"
+    cordova plugin add cordova-plugin-firebase-dynamiclinks --save --variable APP_DOMAIN="example.com" --variable REVERSED_CLIENT_ID="123456789.com.example" --variable PHOTO_LIBRARY_USAGE_DESCRIPTION="Account images used to present invites dialog"
 
 Variables `APP_DOMAIN` and `APP_PATH` specify web URL where your app will start an activity to handle the link.
 
 Variable `REVERSED_CLIENT_ID` can be found in your `GoogleService-Info.plist` under the same key name.
+
+Variable `PHOTO_LIBRARY_USAGE_DESCRIPTION` specifies required value for `NSPhotoLibraryUsageDescription` on iOS.
 
 ## Supported Platforms
 

@@ -48,12 +48,10 @@
 
         <dependency id="cordova-support-google-services" version="~1.0.0"/>
 
-        <framework src="com.google.firebase:firebase-invites:11.0.+" />
         <framework src="com.google.firebase:firebase-dynamic-links:11.0.+" />
     </platform>
 
     <platform name="ios">
-        <preference name="CONTACTS_USAGE_DESCRIPTION" default=" " />
         <preference name="PHOTO_LIBRARY_USAGE_DESCRIPTION" />
 
         <config-file parent="/*" target="config.xml">
@@ -94,12 +92,8 @@
             </array>
         </config-file>
 
-        <config-file target="*-Info.plist" parent="NSContactsUsageDescription">
-           <string>$CONTACTS_USAGE_DESCRIPTION</string>
-        </config-file>
-
         <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
-           <string>$PHOTO_LIBRARY_USAGE_DESCRIPTION</string>
+            <string>$PHOTO_LIBRARY_USAGE_DESCRIPTION</string>
         </config-file>
 
         <header-file src="src/ios/AppDelegate+FirebaseDynamicLinksPlugin.h" />
@@ -108,7 +102,6 @@
         <source-file src="src/ios/FirebaseDynamicLinksPlugin.m" />
 
         <framework src="Firebase/DynamicLinks" type="podspec" spec="~> 4.1"/>
-        <framework src="Firebase/Invites" type="podspec" spec="~> 4.1"/>
     </platform>
 
 </plugin>

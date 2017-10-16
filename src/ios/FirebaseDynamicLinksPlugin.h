@@ -1,17 +1,14 @@
 #import <Cordova/CDV.h>
 #import "AppDelegate.h"
 
-@import FirebaseInvites;
-@import GoogleSignIn;
+@import Firebase;
 
-@interface FirebaseDynamicLinksPlugin : CDVPlugin<FIRInviteDelegate, GIDSignInDelegate, GIDSignInUIDelegate>
+@interface FirebaseDynamicLinksPlugin : CDVPlugin
 
 - (void)onDynamicLink:(CDVInvokedUrlCommand *)command;
-- (void)sendInvitation:(CDVInvokedUrlCommand*)command;
-- (void)postDynamicLink:(NSString*) deepLink weakConfidence:(BOOL) weakConfidence inviteId:(NSString*) inviteId;
+- (void)postDynamicLink:(FIRDynamicLink*) dynamicLink;
 
 @property (nonatomic, copy) NSString *dynamicLinkCallbackId;
-@property (nonatomic, assign) BOOL isSigningIn;
-@property NSDictionary* cachedInvitation;
+@property (nonatomic, retain) NSDictionary* cachedDynamicLinkData;
 
 @end

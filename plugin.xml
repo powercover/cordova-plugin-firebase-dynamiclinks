@@ -20,7 +20,6 @@
         <merges target="cordova.plugins.firebase.dynamiclinks" />
     </js-module>
 
-    <preference name="REVERSED_CLIENT_ID" />
     <preference name="APP_DOMAIN" />
     <preference name="APP_PATH" default ="/" />
 

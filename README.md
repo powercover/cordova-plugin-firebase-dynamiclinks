@@ -3,7 +3,9 @@
  
 ## Installation
 
-    cordova plugin add cordova-plugin-firebase-dynamiclinks --save --variable APP_DOMAIN="example.com" --variable REVERSED_CLIENT_ID="123456789.com.example" --variable PHOTO_LIBRARY_USAGE_DESCRIPTION="Account images used to present invites dialog"
+    cordova plugin add cordova-plugin-firebase-dynamiclinks --save --variable APP_DOMAIN="example.com" --variable REVERSED_CLIENT_ID="123456789.com.example"
+
+If you need to set a specific dependency version on Android then use variable `FIREBASE_VERSION`.
 
 Variables `APP_DOMAIN` and `APP_PATH` specify web URL where your app will start an activity to handle the link.
 
